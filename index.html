@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tamsyn Evezard — Data Science & Software Development</title>
+<meta name="description" content="Portfolio of Tamsyn Evezard — data analysis, data science, and software development projects.">
+<script>
+  (function () {
+    try {
+      var stored = localStorage.getItem('theme');
+      var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    } catch (e) {}
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- Mobile top bar (sidebar becomes an off-canvas drawer below this breakpoint) -->
+<div class="mobile-topbar">
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <a href="#top" class="nav-brand"><span class="nav-brand-name">tamsyn_evezard</span></a>
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+    <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+    <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+  </button>
+</div>
+
+<div class="app-shell">
+
+  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <a href="#top" class="sidebar-brand" aria-label="Tamsyn Evezard — back to top">
+      <img src="assets/profile/tamsyn-headshot.jpg" alt="Tamsyn Evezard" class="sidebar-avatar">
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#top">overview</a></li>
+      <li><a href="#about">about</a></li>
+      <li><a href="#data-projects">data_projects</a></li>
+      <li><a href="#dev-projects">dev_projects</a></li>
+      <li><a href="#skills">skills</a></li>
+      <li><a href="#contact">contact</a></li>
+    </ul>
+    <button class="theme-toggle sidebar-theme-toggle" id="themeToggleSidebar" aria-label="Toggle dark mode">
+      <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <span>toggle theme</span>
+    </button>
+  </aside>
+
+  <main id="main">
+
+    <!-- Overview / hero -->
+    <section class="overview" id="top">
+      <p class="eyebrow">// portfolio.init()</p>
+      <h1>Tamsyn Evezard</h1>
+      <div class="overview-top">
+        <div class="overview-photo-card">
+          <div class="overview-photo-card-header">
+            <span class="dot dot-rose"></span><span class="dot dot-sage"></span><span class="dot dot-muted"></span>
+          </div>
+          <img src="assets/profile/tamsyn-headshot.jpg" alt="Tamsyn Evezard">
+        </div>
+        <div class="overview-details">
+          <p class="hero-tagline">
+            <span id="typewriter" class="typewriter" aria-hidden="true"></span><span class="caret" aria-hidden="true"></span>
+            <span class="sr-only">Data Scientist &amp; Software Developer</span>
+          </p>
+          <p class="hero-sub">
+            From data dashboards to full-stack applications, I like building things that work,
+            make life easier, and sometimes just make technology more fun.
+          </p>
+          <div class="hero-actions">
+            <a href="#data-projects" class="hero-link">View Projects <span aria-hidden="true">↓</span></a>
+            <a href="https://github.com/TamsynE" target="_blank" rel="noopener" class="hero-link">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.08.78 2.17 0 1.57-.01 2.83-.01 3.21 0 .3.2.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <h2 class="section-title"><span class="section-index">01</span> whoami</h2>
+      <p class="about-text">
+        I'm a Computer Science professional who enjoys turning messy problems into clear, usable
+        solutions, whether that's transforming a dataset into an interactive dashboard, turning a
+        vague feature request into a polished end-to-end application, or finding better ways to
+        test and improve software.
+      </p>
+      <p class="about-text">
+        I currently work as a QA Analyst focused on test automation and software quality, while
+        also teaching Computer Science as an adjunct professor. I hold a Master's and Bachelor's
+        degree in Computer Science and enjoy exploring new technologies, AI, automation, and
+        emerging tools that make it possible to build smarter and more effective solutions.
+      </p>
+      <p class="about-text">
+        Thanks for stopping by! Take a look around and explore some of the projects I've built
+        along the way.
+      </p>
+    </section>
+
+    <!-- Data Science Projects -->
+    <section class="section" id="data-projects">
+      <h2 class="section-title"><span class="section-index">02</span> Data Science</h2>
+      <p class="section-intro">Pipelines, forecasting, and machine learning projects.</p>
+
+      <div class="project-grid">
+
+        <article class="project-card">
+          <!--
+            Live embed: set DASHBOARD_EMBED_URL in js/main.js to your Data Studio
+            "Embed report" URL (File → Embed report → Enable embedding) to swap this
+            fallback for a real, interactive embedded dashboard. See README for steps.
+          -->
+          <div class="project-media project-media--embed" id="northwindEmbed">
+            <div class="embed-fallback">
+              <img src="assets/projects/northwind-etl.webp" alt="Northwind Revenue Report dashboard in Data Studio, showing weekly revenue, top customer and employee, revenue by product and category, and revenue by country" loading="lazy">
+              <div class="embed-fallback-overlay">
+                <p class="embed-fallback-title">Static preview — click for the live version</p>
+                <a href="https://lookerstudio.google.com/s/naGLnF3fd40" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">Open Live Dashboard ↗</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <h3>Northwind ETL Pipeline &amp; Analytics</h3>
+              <span class="badge">live dashboard</span>
+            </div>
+            <p>
+              End-to-end ETL pipeline on the Northwind retail dataset: raw CSVs are cleaned and
+              transformed with Python/Pandas, loaded into BigQuery using a star schema, then
+              queried with SQL and visualized in an interactive Data Studio dashboard.
+            </p>
+            <ul class="tag-list">
+              <li>Python</li><li>Pandas</li><li>SQL</li><li>BigQuery</li><li>Data Studio</li><li>ETL</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/TamsynE/Northwind-ETL-Pipeline" target="_blank" rel="noopener">View Code →</a>
+              <a href="https://lookerstudio.google.com/s/naGLnF3fd40" target="_blank" rel="noopener">Live Dashboard →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-media">
+            <img src="assets/projects/streamflow-forecast.png" alt="StreamFlow Forecast chart for the Trinity River Burnt Ranch sensor, showing current, historic high/low, and forecast streamflow in CFS" loading="lazy">
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <h3>StreamFlow Forecast</h3>
+              <span class="badge badge-rose">forecasting</span>
+            </div>
+            <p>
+              Pulls live USGS streamflow sensor data via the Hydrofunctions module and plots nine
+              years of historical river flow against a current-year, week-long forecast — surfacing
+              the highest-flow year, lowest-flow year, and a "typical" flow band for comparison.
+            </p>
+            <ul class="tag-list">
+              <li>Python</li><li>Hydrofunctions</li><li>Pandas</li><li>NumPy</li><li>Matplotlib</li><li>Time Series</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/TamsynE/StreamFlow-Forecast" target="_blank" rel="noopener">View Code →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-media">
+            <img src="assets/projects/titanic.png" alt="Bar chart of Titanic passenger survival rate by age group, highest for ages 0-10 and generally declining with age" loading="lazy">
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <h3>Titanic Survival Prediction Analysis</h3>
+              <span class="badge">ml</span>
+            </div>
+            <p>
+              Classic ML workflow on the Kaggle Titanic dataset: data cleaning, exploratory analysis,
+              feature engineering (family size, title extraction), and a logistic regression model
+              evaluated on accuracy, precision, recall, and F1 — with gender and class the strongest
+              survival predictors.
+            </p>
+            <ul class="tag-list">
+              <li>Python</li><li>scikit-learn</li><li>Pandas</li><li>Matplotlib</li><li>Seaborn</li><li>Jupyter</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/TamsynE/Titanic-Survival-Prediction-Analysis" target="_blank" rel="noopener">View Code →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-media">
+            <img src="assets/projects/neural-networks.png" alt="Line chart comparing training and validation accuracy across epochs for CNNs with 2, 3, and 4 convolutional layers" loading="lazy">
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <h3>Neural Networks</h3>
+              <span class="badge badge-rose">deep learning</span>
+            </div>
+            <p>
+              A set of AI coursework experiments: a feed-forward network trained on MNIST, titrated
+              across training-set size, layer count, epochs, batch size, and activation function; a
+              convolutional network on CIFAR-10 comparing ANN vs. CNN performance; and a fine-tuned
+              BART transformer for news article summarization on the CNN/DailyMail dataset.
+            </p>
+            <ul class="tag-list">
+              <li>Python</li><li>TensorFlow</li><li>Keras</li><li>Hugging Face Transformers</li><li>scikit-learn</li><li>NumPy</li><li>Matplotlib</li><li>Jupyter Notebook</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/TamsynE/Neural-Networks" target="_blank" rel="noopener">View Code →</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Software Development Projects -->
+    <section class="section" id="dev-projects">
+      <h2 class="section-title"><span class="section-index">03</span> Software Development</h2>
+      <p class="section-intro">Full-stack and mobile applications built solo and in small teams.</p>
+
+      <div class="project-grid">
+
+        <article class="project-card">
+          <div class="project-media">
+            <img src="assets/projects/stock-simulator.webp" alt="Stock Simulator App trade screen, showing a NVDA stock search, buy/sell actions, a scheduled trade form, and a price history chart" loading="lazy">
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <h3>Stock Simulator App</h3>
+              <span class="badge">team of 5</span>
+            </div>
+            <p>
+              A simulated stock-trading platform built with a 5-person team: users trade and manage
+              a portfolio with live-updating prices and profit graphs, backed by secure multi-user
+              authentication, CAPTCHA, and an admin dashboard. Served as Authentication &amp; API Lead.
+            </p>
+            <ul class="tag-list">
+              <li>Python</li><li>Flask</li><li>SQLAlchemy</li><li>SQLite</li><li>D3.js</li><li>Face Recognition</li><li>yfinance</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/TamsynE/Stock-Simulator-App" target="_blank" rel="noopener">View Code →</a>
+              <a href="https://www.youtube.com/watch?v=7XaVBbRt8u4" target="_blank" rel="noopener">Watch Demo →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-media">
+            <img src="assets/projects/meal-master.png" alt="Meal Master app screens: recipe categories grid, add-recipe form with ingredient entry, and a saved breakfast recipe" loading="lazy">
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <h3>Meal Master</h3>
+              <span class="badge badge-rose">mobile</span>
+            </div>
+            <p>
+              A cross-platform mobile app for meal planning, built with a co-developer: save and
+              organize recipes, plan meals for the week, and auto-generate a shopping list from
+              the plan.
+            </p>
+            <ul class="tag-list">
+              <li>React Native</li><li>Expo</li><li>React Navigation</li><li>Axios</li><li>React Native Paper</li><li>JavaScript</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/TamsynE/Meal-Master" target="_blank" rel="noopener">View Code →</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section" id="skills">
+      <h2 class="section-title"><span class="section-index">04</span> Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3>Data &amp; Analytics</h3>
+          <ul class="tag-list">
+            <li>Python</li><li>Pandas</li><li>NumPy</li><li>scikit-learn</li><li>TensorFlow</li><li>Keras</li><li>SQL</li><li>BigQuery</li><li>Data Studio</li><li>Tableau</li><li>Jupyter</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Software Development</h3>
+          <ul class="tag-list">
+            <li>JavaScript</li><li>TypeScript</li><li>Angular</li><li>NestJS</li><li>Flask</li><li>React Native</li><li>Expo</li><li>D3.js</li><li>C</li><li>C#</li><li>HTML/CSS</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>QA &amp; DevOps</h3>
+          <ul class="tag-list">
+            <li>Playwright</li><li>Automated Testing</li><li>CI/CD</li><li>Docker</li><li>Agile/Scrum</li><li>Git / GitHub</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Tools &amp; AI</h3>
+          <ul class="tag-list">
+            <li>MongoDB</li><li>MySQL</li><li>SQLite</li><li>Google Cloud Platform</li><li>Claude Code</li><li>OpenAI APIs</li><li>Anthropic APIs</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <h2 class="section-title"><span class="section-index">05</span> Contact</h2>
+      <p class="section-intro">Always open to chatting about data, software, or interesting problems.</p>
+      <div class="contact-links">
+        <a href="https://github.com/TamsynE" target="_blank" rel="noopener" class="icon-link" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.08.78 2.17 0 1.57-.01 2.83-.01 3.21 0 .3.2.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/tamsyn-evezard/" target="_blank" rel="noopener" class="icon-link" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> Tamsyn Evezard</p>
+    </footer>
+
+  </main>
+
+</div>
+
+<!-- Terminal easter egg -->
+<div class="terminal-widget" id="terminalWidget">
+  <button class="terminal-launcher" id="terminalLauncher" aria-expanded="false" aria-controls="terminalPanel">
+    <span class="terminal-launcher-prompt">&gt;_</span><span class="terminal-launcher-label"> terminal</span>
+  </button>
+  <section class="terminal-panel" id="terminalPanel" hidden aria-label="Interactive terminal easter egg">
+    <header class="terminal-header">
+      <span class="terminal-dots"><i></i><i></i><i></i></span>
+      <span class="terminal-title">visitor@tamsyn-evezard:~</span>
+      <button class="terminal-close" id="terminalClose" aria-label="Close terminal">&times;</button>
+    </header>
+    <div class="terminal-output" id="terminalOutput" role="log" aria-live="polite"></div>
+    <form class="terminal-input-row" id="terminalForm">
+      <span class="terminal-prompt">visitor@tamsyn-evezard:~$</span>
+      <input class="terminal-input" id="terminalInput" type="text" autocomplete="off" spellcheck="false" aria-label="Terminal command input">
+    </form>
+  </section>
+</div>
+
+<!-- Custom cursor: only ever created/shown on devices with a real mouse (see js/main.js) -->
+<div class="custom-cursor" id="customCursor" aria-hidden="true">
+  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+    <path d="M3 2 L23 11.5 L12.5 14.5 L8.5 25 Z" fill="#4c5a41" stroke="#ffffff" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+  </svg>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
