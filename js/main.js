@@ -248,7 +248,12 @@ function openTerminal() {
   if (terminalOutput.children.length === 0) {
     termPrint("Welcome. Type 'help' to see what I respond to.");
   }
-  terminalInput.focus();
+  // Only auto-focus on devices with a real keyboard/mouse (desktop). On touch
+  // devices, focusing immediately would pop the on-screen keyboard before the
+  // visitor has chosen to type anything -- let them tap the input when ready.
+  if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    terminalInput.focus();
+  }
 }
 
 function closeTerminal() {
